@@ -1,0 +1,134 @@
+
+
+
+
+/* Custom CSS */
+
+/* Default styles */
+/* 
+*{
+    background-color: rgba(249, 253, 253, 0.322);
+} */
+.error-icon {
+    display: none;
+    position: absolute;
+    right: 10px; /* Adjust the right spacing */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: #ff3333;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.error-icon:hover::after {
+    content: attr(title);
+    position: absolute;
+    top: -30px;
+    right: -10px;
+    background-color: rgba(255, 51, 51, 0.9);
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.input-group {
+    position: relative;
+   border: 0.001rem solid black;
+   border-radius: 23px 0px 0px 23px;
+}
+
+.card {
+    width: 100%; /* Adjust to full width on mobile */
+    margin: 20px auto; /* Add some margin for better spacing */
+    max-width: 400px; /* Limit the width for larger screens */
+}
+
+.card-header {
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.input-group-text {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #03060a;
+    border-color: #16171a;
+}
+
+/* Media query for mobile screens */
+@media (max-width: 767px) {
+    .error-icon {
+        right: 5px;
+
+    .card {
+        margin: 10px auto; 
+    }
+}
+}
+
+
+
+/* Add glassy effect to card */
+.card {
+    background: rgba(255, 255, 255, 0.5);
+    border: none; 
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); 
+}
+
+/* Style card header */
+.card-header {
+    background-color: rgba(26, 37, 49, 0.8); 
+    border-bottom: none; 
+}
+
+/* Style form elements */
+.form-control {
+    background-color: rgba(255, 255, 255, 0.8); 
+    border: 1px solid black;
+    border-radius: 20px 0px 0px 20px; 
+}
+
+/* Style input group */
+.input-group-text {
+    background-color: rgba(26, 37, 49, 0.8); 
+    border:1px solid black; 
+    border-radius: 20px 0 0 20px; 
+    color: white;
+}
+
+/* Style submit button */
+.btn-primary {
+    background-color: rgba(7, 16, 26, 0.8); 
+    border: none; 
+    border-radius: 20px;
+}
+
+/* Style modal header */
+.modal-header {
+    background-color: rgba(26, 37, 49, 0.8); 
+    border-bottom: none; 
+}
+
+/* Style modal body */
+.modal-body {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}

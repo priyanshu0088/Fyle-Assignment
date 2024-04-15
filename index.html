@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tax Calculator</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header text-white">
+            <h3 class="mb-0">Tax Calculator</h3>
+        </div>
+        <div class="card-body">
+            <form id="tax-form">
+                <div class="form-group">
+                    <label for="gross-income">Gross Annual Income (in Lakhs)</label>
+                    <div class="input-group ">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">₹</span>
+                        </div>
+                        <input type="number" class="form-control" id="gross-income" placeholder="Enter gross annual income">
+                        <div id="gross-income-error-icon" class="error-icon" title="Enter a valid number">!</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="extra-income">Extra Income (in Lakhs)</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">₹</span>
+                        </div>
+                        <input type="number" class="form-control" id="extra-income" placeholder="Enter extra income">
+                        <div id="extra-income-error-icon" class="error-icon" title="Enter a valid number">!</div>
+                    </div>
+                </div>
+                <div class="form-group position-relative">
+                    <label for="age">Age Group</label>
+                    <select class="form-control" id="age">
+                        <option value="">Select Age Group</option>
+                        <option value="<40">&lt;40</option>
+                        <option value="≥40 <60">&ge;40 &lt;60</option>
+                        <option value="≥60">&ge;60</option>
+                    </select>
+                    <div id="age-error-icon" class="error-icon mt-3" title="Age group is required">!</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="deductions">Total Applicable Deductions (in Lakhs)</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">₹</span>
+                        </div>
+                        <input type="number" class="form-control" id="deductions" placeholder="Enter deductions">
+                        <div id="deductions-error-icon" class="error-icon" title="Enter a valid number">!</div>
+                    </div>
+                </div>
+                <button type="button" onclick="calculateTax()" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="resultModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-white">
+                <h5 class="modal-title" id="resultModalLabel">Tax Calculation Result</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="resultBody">
+                <!-- Tax calculation result will be displayed here -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
